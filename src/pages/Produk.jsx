@@ -10,7 +10,7 @@ const Produk = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="bg-gradient-to-b from-[#3b2215] via-[#5a3520] to-[#7a4b28] min-h-screen py-12 px-6 text-yellow-100">
+    <section className="bg-gradient-to-b from-[#3b2215] via-[#5a3520] to-[#7a4b28] min-h-screen py-26 px-6 text-yellow-100">
       <h2 className="text-4xl font-extrabold text-center mb-12 text-yellow-200 tracking-wider">
         Kelola Produk
       </h2>

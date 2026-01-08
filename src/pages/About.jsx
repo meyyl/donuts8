@@ -3,7 +3,7 @@ import logo from "/logo.png";
 
 const About = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-[#f5efe7] via-[#f0e7da] to-[#e6d7c3] flex flex-col items-center justify-center px-6 py-20">
+    <div className="relative min-h-screen bg-gradient-to-b from-[#f5efe7] via-[#f0e7da] to-[#e6d7c3] flex flex-col items-center justify-center px-6 py-26">
 
       {/* Decorative Blur Orbs */}
       <div className="absolute top-20 left-10 w-64 h-64 bg-yellow-200/30 blur-3xl rounded-full"></div>

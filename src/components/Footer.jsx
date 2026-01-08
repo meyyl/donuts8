@@ -1,5 +1,7 @@
 import { FaTiktok, FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 export default function Footer() {
   return (
@@ -40,11 +42,11 @@ export default function Footer() {
         >
           <h4 className="text-lg font-semibold text-[#d4a256]">Quick Links</h4>
           <ul className="mt-4 space-y-2 text-sm text-[#fff7ef]/90">
-            <li><a href="#about" className="hover:text-[#d4a256] transition">Our Story</a></li>
-            <li><a href="#featured" className="hover:text-[#d4a256] transition">Featured Products</a></li>
-            <li><a href="/products" className="hover:text-[#d4a256] transition">Shop Now</a></li>
-            <li><a href="/contact" className="hover:text-[#d4a256] transition">Contact</a></li>
-          </ul>
+  <li><Link to="/about" className="hover:text-[#d4a256] transition">Our Story</Link></li>
+  <li><Link to="/products" className="hover:text-[#d4a256] transition">Shop Now</Link></li>
+  <li><Link to="/contact" className="hover:text-[#d4a256] transition">Contact</Link></li>
+</ul>
+
         </motion.div>
 
         {/* Column 3: Newsletter */}
@@ -56,19 +58,30 @@ export default function Footer() {
           <p className="mt-2 text-sm text-[#fff7ef]/90">
             Join our newsletter for daily specials & updates.
           </p>
-          <form className="mt-4 flex gap-2">
-            <input
-              type="email"
-              placeholder="Your email"
-              className="flex-1 px-4 py-2 rounded-full border border-white/30 bg-white/10 placeholder-[#fff7ef]/70 text-white focus:outline-none"
-            />
-            <motion.button
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              className="px-4 py-2 rounded-full bg-[#d4a256] text-[#3b2a26] font-semibold shadow"
-            >
-              <FaEnvelope />
-            </motion.button>
-          </form>
+          <form
+  className="mt-4 flex gap-2"
+  onSubmit={(e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    window.location.href = `mailto:cravedonutss@gmail.com?subject=Subscribe Crave Donuts&body=Halo, saya ingin subscribe.%0AEmail: ${email}`;
+  }}
+>
+  <input
+    type="email"
+    name="email"
+    required
+    placeholder="Your email"
+    className="flex-1 px-4 py-2 rounded-full border border-white/30 bg-white/10 placeholder-[#fff7ef]/70 text-white focus:outline-none"
+  />
+  <motion.button
+    type="submit"
+    whileHover={{ scale: 1.1, rotate: 5 }}
+    className="px-4 py-2 rounded-full bg-[#d4a256] text-[#3b2a26] font-semibold shadow"
+  >
+    <FaEnvelope />
+  </motion.button>
+</form>
+
         </motion.div>
       </div>
 
